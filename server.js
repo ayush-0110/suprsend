@@ -60,8 +60,8 @@ const store = new MongoDBStore({
 
 
 const corsOptions = {
-    // origin: 'https://frontend-main.netlify.app',
-    origin: 'http://localhost:3000',
+    origin: 'https://frontend-main.netlify.app',
+    // origin: 'http://localhost:3000',
     credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   };
