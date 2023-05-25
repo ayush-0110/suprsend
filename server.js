@@ -110,7 +110,7 @@ app.post('/register', async (req, res) => {
   app.post('/login', async (req, res) => {
     const { username, password, phone } = req.body;
     const distinct_id = username;
-    const event_name = "SEND_NOTIF"
+    const event_name = "SENDING"
 const superUser = supr_client.user.get_instance(distinct_id);
     const user = await User.findOne({ username, password });
   
