@@ -127,8 +127,10 @@ const superUser = supr_client.user.get_instance(distinct_id);
 // After setting the channel details on user-instance, call save()
 const response1 = superUser.save() //save() returns promise
 response1.then((res1) => console.log("SUPRUSER response", res1));
-
-const event = new Event(distinct_id, event_name)
+const properties = {                                                    
+  "first_name":"Young Quizzer"
+} 
+const event = new Event(distinct_id, event_name, properties)
 const responseSend  = supr_client.track_event(event)
 responseSend.then((res2) => console.log("SUPRSEND NOTIF SEND response", res2));
 
